@@ -56,7 +56,7 @@ const TodoContainer = () => {
   }
 
   return (
-    <div className="border rounded-xl border-gray-300 w-4/6 m-auto h-[500px] max-w-[600px] shadow-xl p-4">
+    <div className="border rounded-xl border-gray-300  m-auto h-[500px] max-w-[600px] shadow-xl p-4">
       <div className="mt-10">
         <form onSubmit={handleAddTask}>
           <input
