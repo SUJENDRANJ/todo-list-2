@@ -22,10 +22,9 @@ const TodoContainer = () => {
 
   function handleAddTask(e) {
     e.preventDefault();
-    if (todo.trim() === "") return; // Prevent adding empty tasks
+    if (todo.trim() === "") return;
 
     if (editId) {
-      // Update existing task
       const updatedTodos = todos.map((t) =>
         t.id === editId ? { id: t.id, text: todo } : t
       );
@@ -33,12 +32,11 @@ const TodoContainer = () => {
       setEditBtn("Add");
       setEditId(0);
     } else {
-      // Add new task
       const newTask = { id: Date.now(), text: todo };
       setTodos([...todos, newTask]);
     }
 
-    setTodo(""); // Clear input field
+    setTodo("");
   }
 
   function handleEdit(id) {
